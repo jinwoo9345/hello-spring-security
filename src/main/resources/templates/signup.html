@@ -52,5 +52,10 @@
         </div>
     </div>
 </div>
+<hr>
+<footer class="text-muted small text-center pb-4">
+    <p th:text="${' | 학번: 2071124 |'+' 이름 : 정진우 |'+
+    '실습 수행: ' + #temporals.format(#temporals.createNow(), 'yyyy-MM-dd HH:mm:ss')}"></p>
+</footer>
 </body>
 </html>
