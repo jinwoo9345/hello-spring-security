@@ -1,6 +1,7 @@
 package kr.ac.hansung.controller;
 
 
+import jakarta.validation.Valid;
 import kr.ac.hansung.dto.ProductDto;
 import kr.ac.hansung.entity.Product;
 import kr.ac.hansung.service.ProductService;
@@ -85,7 +86,7 @@ public class ProductController {
 
     @PostMapping("/{id}/edit")
     public String editProduct(@PathVariable Long id,
-                              @ModelAttribute ProductDto productDto,
+                              @Valid @ModelAttribute ProductDto productDto,
                               BindingResult bindingResult,
                               Model model,
                               RedirectAttributes ra) {
